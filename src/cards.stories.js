@@ -1,4 +1,4 @@
-import { Template } from '../../.storybook/template.js';
+import { Template } from '../.storybook/template.js';
 import decorate from './cards.js';
 // eslint-disable-next-line no-unused-vars
 import style from './cards.css';

@@ -11,6 +11,8 @@
  */
 
 import { terser } from 'rollup-plugin-terser';
+import css from 'rollup-plugin-css-only';
+import copy from 'rollup-plugin-copy'
 
 const banner = `/*
  * Copyright ${new Date().getFullYear()} Adobe. All rights reserved.
@@ -25,38 +27,28 @@ const banner = `/*
  * @preserve
  */`;
 
-const bundles = [
+export default [
   {
-    source: 'src/cards.js',
-    outputFile: 'dist/cards.js',
+    input: 'src/cards.js',
+    output: {
+      file: 'dist/cards.js',
+      format: 'es',
+      sourcemap: false,
+      exports: 'auto'
+    },
+    plugins: [
+      copy({
+        targets: [
+          { src: 'src/cards.stories.js', dest: 'dist/' }
+        ]
+      })
+      /*terser()*/],
   },
   {
-    source: 'src/cards.css',
-    outputFile: 'dist/cards.css',
-  },
-  {
-    source: 'src/cards.stories.js',
-    outputFile: 'dist/cards.stories.js',
-  },
+    input: 'src/cards.css',
+    output: {
+      file: 'cards.css'
+    },
+    plugins: [css({ output: 'dist/cards.css' })]
+  }
 ];
-
-export default [...bundles.map(({ outputFile, source, minify = true }) => ({
-  input: source,
-  inlineDynamicImports: true,
-  output: [
-    {
-      file: `${outputFile}.esm.js`,
-      format: 'es',
-      sourcemap: false,
-      exports: 'auto',
-    },
-    minify && {
-      file: `${outputFile}.esm.min.js`,
-      format: 'es',
-      sourcemap: false,
-      exports: 'auto',
-      plugins: [terser()],
-      banner,
-    },
-  ].filter((m) => m),
-}))];
