@@ -1,0 +1,48 @@
+{
+  "name": "@dylandepass/helix-test-block",
+  "version": "1.0.0",
+  "description": "A test helix block package",
+  "main": "index.js",
+  "scripts": {
+    "test": " c8 mocha",
+    "test-ci": "c8 mocha && codecov",
+    "lint": "eslint .",
+    "docs": "npx jsdoc2md -c .jsdoc.json --files 'src/*.js'  > docs/API.md",
+    "build": "rollup --config --environment NODE_ENV:development",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "build:production": "rollup --config --environment NODE_ENV:production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylandepass/helix-test-block.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dylandepass/helix-test-block/issues"
+  },
+  "homepage": "https://github.com/dylandepass/helix-test-block#readme",
+  "devDependencies": {
+    "@adobe/eslint-config-helix": "1.3.2",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/npm": "9.0.0",
+    "c8": "7.11.0",
+    "codecov": "3.8.3",
+    "commitizen": "4.2.4",
+    "jsdoc-to-markdown": "7.1.1",
+    "rollup": "2.77.2",
+    "rollup-plugin-terser": "7.0.2",
+    "semantic-release": "19.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
