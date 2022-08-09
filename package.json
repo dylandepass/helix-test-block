@@ -29,6 +29,8 @@
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "9.0.0",
+    "mocha": "9.2.1",
+    "mocha-multi-reporters": "1.5.1",
     "husky": "7.0.4",
     "c8": "7.11.0",
     "codecov": "3.8.3",
