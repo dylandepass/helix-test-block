@@ -23,6 +23,10 @@
   "bugs": {
     "url": "https://github.com/dylandepass/helix-test-block/issues"
   },
+  "helix": {
+    "blockName": "cards",
+    "contentPreview": "https://docs.google.com/document/d/e/2PACX-1vQenMpgXsXwvPjS8iweY8mTpKbyJV_MpjuwpIbpDOnzrhgOz6DWcv3c7EmTtqeff1sv7G5zzeLBwpQy/pub"
+  },
   "homepage": "https://github.com/dylandepass/helix-test-block#readme",
   "devDependencies": {
     "@adobe/eslint-config-helix": "1.3.2",
