@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dylandepass/helix-test-block/compare/v1.0.0...v1.0.1) (2022-08-10)
+
+
+### Bug Fixes
+
+* test publish ([1e85ecb](https://github.com/dylandepass/helix-test-block/commit/1e85ecbe858a5e43250ccf31b8026ac3498abb2a))
+
 # 1.0.0 (2022-08-09)
 
 
