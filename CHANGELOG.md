@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dylandepass/helix-test-block/compare/v1.0.1...v1.1.0) (2022-08-10)
+
+
+### Features
+
+* update package.json with helix block info ([b1c76a4](https://github.com/dylandepass/helix-test-block/commit/b1c76a4a6b4a0e8891e3905374620968bc4f1bd8))
+
 ## [1.0.1](https://github.com/dylandepass/helix-test-block/compare/v1.0.0...v1.0.1) (2022-08-10)
 
 
