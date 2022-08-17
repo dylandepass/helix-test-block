@@ -12,7 +12,9 @@
     "semantic-release": "semantic-release",
     "commit": "git-cz",
     "prepare": "husky install",
-    "build:production": "rollup --config --environment NODE_ENV:production"
+    "build:production": "rollup --config --environment NODE_ENV:production",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,9 @@
     "url": "https://github.com/dylandepass/helix-test-block/issues"
   },
   "helix": {
-    "blockName": "cards",
+    "name": "cards",
+    "type": "block",
+    "include": "src",
     "contentPreview": "https://docs.google.com/document/d/e/2PACX-1vQenMpgXsXwvPjS8iweY8mTpKbyJV_MpjuwpIbpDOnzrhgOz6DWcv3c7EmTtqeff1sv7G5zzeLBwpQy/pub"
   },
   "homepage": "https://github.com/dylandepass/helix-test-block#readme",
@@ -33,6 +37,10 @@
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "9.0.0",
+    "@storybook/addon-essentials": "6.5.9",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/html": "6.5.9",
+    "@storybook/testing-library": "0.0.13",
     "c8": "7.11.0",
     "codecov": "3.8.3",
     "commitizen": "4.2.4",
@@ -45,7 +53,8 @@
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-terser": "7.0.2",
-    "semantic-release": "19.0.2"
+    "semantic-release": "19.0.2",
+    "storybook": "6.5.10"
   },
   "publishConfig": {
     "access": "public"
@@ -54,5 +63,8 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@dylandepass/helix-web-library": "^1.12.0"
   }
 }
